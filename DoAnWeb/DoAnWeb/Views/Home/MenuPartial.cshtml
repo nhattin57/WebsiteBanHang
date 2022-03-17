@@ -1,0 +1,24 @@
+﻿@model IEnumerable<DoAnWeb.Models.SanPham> 
+
+<div class="menu">
+    @foreach (var groupItem in Model.GroupBy(n => n.LoaiSanPham))
+    {
+        if (groupItem.Key != null)
+        {
+            <li>
+                <a href="">@groupItem.Key.TenLoai</a>
+                <ul class="sub-menu">
+                    @foreach (var item in groupItem.GroupBy(n => n.NhaSanXuat))
+                    {
+                        if (item.Key != null)
+                        {
+                            <li><a href="">@item.Key.TenNSX</a></li>
+                        }
+                    }
+                </ul>
+            </li>
+        }
+    }
+
+    </div>
+
