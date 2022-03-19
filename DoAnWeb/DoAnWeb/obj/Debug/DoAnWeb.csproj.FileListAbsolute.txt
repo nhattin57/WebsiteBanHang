@@ -80,3 +80,7 @@ E:\Do_An_WEB\DoAnWeb\DoAnWeb\bin\EntityFramework.dll
 E:\Do_An_WEB\DoAnWeb\DoAnWeb\bin\EntityFramework.SqlServer.dll
 E:\Do_An_WEB\DoAnWeb\DoAnWeb\bin\EntityFramework.xml
 E:\Do_An_WEB\DoAnWeb\DoAnWeb\bin\EntityFramework.SqlServer.xml
+E:\Do_An_WEB\DoAnWeb\DoAnWeb\bin\PagedList.dll
+E:\Do_An_WEB\DoAnWeb\DoAnWeb\bin\PagedList.Mvc.dll
+E:\Do_An_WEB\DoAnWeb\DoAnWeb\bin\PagedList.xml
+E:\Do_An_WEB\DoAnWeb\DoAnWeb\bin\PagedList.Mvc.xml

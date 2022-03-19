@@ -52,6 +52,12 @@
       <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.CSharp" />
+    <Reference Include="PagedList, Version=1.17.0.0, Culture=neutral, PublicKeyToken=abbb863e9397c5e1, processorArchitecture=MSIL">
+      <HintPath>..\packages\PagedList.1.17.0.0\lib\net40\PagedList.dll</HintPath>
+    </Reference>
+    <Reference Include="PagedList.Mvc, Version=4.5.0.0, Culture=neutral, PublicKeyToken=abbb863e9397c5e1, processorArchitecture=MSIL">
+      <HintPath>..\packages\PagedList.Mvc.4.5.0.0\lib\net40\PagedList.Mvc.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Drawing" />
@@ -218,6 +224,7 @@
     <Content Include="Content\images\Samsung-Galaxy-S21-FE-tim-600x600.jpg" />
     <Content Include="Content\images\samsung-galaxy-s21-ultra-bac-600x600-1-600x600.jpg" />
     <Content Include="Content\images\samsung-galaxy-z-fold-3-silver-1-600x600.jpg" />
+    <Content Include="Content\PagedList.css" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
@@ -230,6 +237,8 @@
     <Content Include="Scripts\jquery-3.4.1.slim.js" />
     <Content Include="Scripts\jquery-3.4.1.slim.min.js" />
     <None Include="Scripts\jquery.validate-vsdoc.js" />
+    <Content Include="Scripts\jquery.unobtrusive-ajax.js" />
+    <Content Include="Scripts\jquery.unobtrusive-ajax.min.js" />
     <Content Include="Scripts\jquery.validate.js" />
     <Content Include="Scripts\jquery.validate.min.js" />
     <Content Include="Scripts\jquery.validate.unobtrusive.js" />
@@ -250,6 +259,7 @@
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\SanPham\SanPhamStylePartial.cshtml" />
     <Content Include="Views\Home\MenuPartial.cshtml" />
+    <Content Include="Views\SanPham\XemTatCaSanPham.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
