@@ -52,6 +52,12 @@
       <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.CSharp" />
+    <Reference Include="PagedList, Version=1.17.0.0, Culture=neutral, PublicKeyToken=abbb863e9397c5e1, processorArchitecture=MSIL">
+      <HintPath>..\packages\PagedList.1.17.0.0\lib\net40\PagedList.dll</HintPath>
+    </Reference>
+    <Reference Include="PagedList.Mvc, Version=4.5.0.0, Culture=neutral, PublicKeyToken=abbb863e9397c5e1, processorArchitecture=MSIL">
+      <HintPath>..\packages\PagedList.Mvc.4.5.0.0\lib\net40\PagedList.Mvc.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Drawing" />
@@ -128,6 +134,7 @@
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\GioHangController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\SanPhamController.cs" />
     <Compile Include="Global.asax.cs">
@@ -137,6 +144,7 @@
     <Compile Include="Models\ChiTietDonDatHang.cs" />
     <Compile Include="Models\ChiTietPhieuNhap.cs" />
     <Compile Include="Models\DonDatHang.cs" />
+    <Compile Include="Models\ItemGioHang.cs" />
     <Compile Include="Models\KhachHang.cs" />
     <Compile Include="Models\LoaiSanPham.cs" />
     <Compile Include="Models\LoaiThanhVien.cs" />
@@ -154,7 +162,7 @@
     <Content Include="Content\bootstrap-theme.min.css" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
-    <Content Include="Content\css\style.css" />
+    <Content Include="Content\css\style1.css" />
     <Content Include="Content\images\250_56515_vosro3405__4_.png" />
     <Content Include="Content\images\250_56657_n7306__9_.png" />
     <Content Include="Content\images\250_58207_laptop_msi_gaming_gf65_thin_10ue_228vn_den_ba_lo_8.png" />
@@ -218,6 +226,7 @@
     <Content Include="Content\images\Samsung-Galaxy-S21-FE-tim-600x600.jpg" />
     <Content Include="Content\images\samsung-galaxy-s21-ultra-bac-600x600-1-600x600.jpg" />
     <Content Include="Content\images\samsung-galaxy-z-fold-3-silver-1-600x600.jpg" />
+    <Content Include="Content\PagedList.css" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
@@ -230,6 +239,8 @@
     <Content Include="Scripts\jquery-3.4.1.slim.js" />
     <Content Include="Scripts\jquery-3.4.1.slim.min.js" />
     <None Include="Scripts\jquery.validate-vsdoc.js" />
+    <Content Include="Scripts\jquery.unobtrusive-ajax.js" />
+    <Content Include="Scripts\jquery.unobtrusive-ajax.min.js" />
     <Content Include="Scripts\jquery.validate.js" />
     <Content Include="Scripts\jquery.validate.min.js" />
     <Content Include="Scripts\jquery.validate.unobtrusive.js" />
@@ -250,10 +261,16 @@
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\SanPham\SanPhamStylePartial.cshtml" />
     <Content Include="Views\Home\MenuPartial.cshtml" />
+    <Content Include="Views\Home\DangNhap.cshtml" />
+    <Content Include="Views\Layouts\HeaderAndFooterLayout.cshtml" />
+    <Content Include="Views\SanPham\XemChiTiet.cshtml" />
+    <Content Include="Views\SanPham\SanPham.cshtml" />
     <Content Include="Views\SanPham\XemTatCaSanPham.cshtml" />
+    <Content Include="Views\Home\DangKy.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Views\GioHang\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />

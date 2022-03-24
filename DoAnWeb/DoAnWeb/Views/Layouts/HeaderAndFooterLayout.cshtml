@@ -1,4 +1,5 @@
 ﻿@using DoAnWeb.Models;
+
 @{
     Layout = null;
 }
@@ -13,8 +14,8 @@
     <title>Document</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
+
     <link href="~/Content/css/style1.css" rel="stylesheet" />
-   
     <script src="~/Content/js/simpleCart.min.js"></script>
     <script src="~/Scripts/jquery.validate.unobtrusive.min.js"></script>
     <link href="~/Content/css/flexslider.css" rel="stylesheet" />
@@ -29,35 +30,34 @@
         <div class="logo">
             <a href="@Url.Action("Index","Home")"><img src="~/Content/images/logo.png" alt="" class="imageChange"></a>
         </div>
-        @Html.Action("MenuPartial","Home")
+        @Html.Action("MenuPartial", "Home")
         @*<div class="menu">
-        @Html.Partial("~/Views/Home/MenuPartial.cshtml")
-        @*<li>
-            <a href="">SẢN PHẨM</a>
-            <ul class="sub-menu">
-                <li><i class="fa fa-laptop"></i><a href="">Laptop, Máy Tính Xách Tay</a></li>
-                <li><i class="fa fa-desktop"></i><a href="">Máy Tính, Máy Chủ</a></li>
-                <li><i class="fa fa-microchip"></i><a href="">Linh Kiện Máy Tính</a></li>
-                <li><i class="fa fa-television"></i><a href="">Màn Hình Máy Tính</a></li>
-                <li><i class="fa fa-headphones"></i><a href="">Gaming Gear</a></li>
-                <li><i class="fa fa-usb"></i><a href="">Phụ Kiện Laptop, PC, Khác</a></li>
-            </ul>
+            @Html.Partial("~/Views/Home/MenuPartial.cshtml")
+            @*<li>
+                <a href="">SẢN PHẨM</a>
+                <ul class="sub-menu">
+                    <li><i class="fa fa-laptop"></i><a href="">Laptop, Máy Tính Xách Tay</a></li>
+                    <li><i class="fa fa-desktop"></i><a href="">Máy Tính, Máy Chủ</a></li>
+                    <li><i class="fa fa-microchip"></i><a href="">Linh Kiện Máy Tính</a></li>
+                    <li><i class="fa fa-television"></i><a href="">Màn Hình Máy Tính</a></li>
+                    <li><i class="fa fa-headphones"></i><a href="">Gaming Gear</a></li>
+                    <li><i class="fa fa-usb"></i><a href="">Phụ Kiện Laptop, PC, Khác</a></li>
+                </ul>
 
-        </li>*@
+            </li>*@
         @*<li><a href="">BẢO HÀNH</a></li>
             <li><a href="">CHÍNH SÁCH - HƯỚNG DẪN</a></li>*@
 
         @*</div>*@
-    
+
     <div class="others">
         <li><input placeholder="Tìm kiếm" type="text"> <i class="fa fa-search"></i></li>
-
         @* Dang Nhap*@
         @if (Session["DangNhap"] != null && Session["DangNhap"] != "")
         {
             ThanhVien tv = (ThanhVien)Session["DangNhap"];
-            <li style="font-weight:bold" >Chào @tv.HoTen</li>
-            <li style="color:blue"> @Html.ActionLink("Đăng Xuất", "DangXuat", "Home", new { @class = "dangxuat" })</li>
+            <li style="font-weight:bold">Chào @tv.HoTen</li>
+            <li> @Html.ActionLink("Đăng Xuất", "DangXuat", "Home",new { @class="dangxuat"})</li>
         }
         else
         {
@@ -73,7 +73,7 @@
     </header>
     <!----end-menu----------->
     <!-----Slider---------->
-    <section id="slider">
+    @*<section id="slider">
         <div class="aspect-ratio-169" style="left: -300%;">
             <img src="~/Content/images/img15.jpg" alt="" style="left: 0%;">
             <img src="~/Content/images/img02.png" alt="" style="left: 100%;">
@@ -88,7 +88,7 @@
             <div class="dot active"></div>
             <div class="dot"></div>
         </div>
-    </section>
+    </section>*@
     <!---------end-slider------>
     @RenderBody()
     <!--<section class="container">-->
@@ -573,8 +573,8 @@
 </body>
 </html>
 <style>
-    .dangxuat{
-        font-weight:bold;
-        color:blue;
+    .dangxuat {
+        font-weight: bold;
+        color: blue;
     }
 </style>

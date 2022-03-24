@@ -1,0 +1,76 @@
+﻿@using DoAnWeb.Models;
+@model SanPham
+
+@{
+    ViewBag.Title = "XemChiTiet";
+    Layout = "~/Views/Layouts/HeaderAndFooterLayout.cshtml";
+}
+
+<div class="containers">
+    <div class="product-content row">
+        <div class="product-content-left row">
+            <div class="product-content-left-big-img">
+                <img src="@Url.Content("~/Content/images/"+Model.HinhAnh)" alt="">
+            </div>
+           
+        </div>
+        <div class="product-content-right">
+            <div class="product-content-right-product-name">
+                <h1>@Model.TenSP</h1>
+                <p>@Model.MaSP</p>
+            </div>
+            <div class="product-content-right-product-item" style="padding-top: 10px;">
+                <div class="product-content-right-product-item-title">
+                    Thông số sản phẩm
+                </div>
+                <p class="product-content-right-product-item-ul">
+                   @Html.Raw(Model.CauHinh)
+                </p>
+            </div>
+            <div class="product-content-right-product-price">
+                <table>
+                    <tbody>
+                        <tr>
+                            <td width="130px" class="font-600">
+                                Giá niêm yết:
+                            </td>
+                            <td>
+                                @{ decimal gianiemyet = Model.DonGia.Value * 100 / 80;}
+                                <del style="color: #888888;" class="font-600">
+                                    @gianiemyet.ToString("#,##")
+                                </del>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td width="130px" class="font-600">
+                               Giá khuyễn mãi:
+                            </td>
+                            <td>
+                                <b style="color: #ce0707;" class="text-18">@Model.DonGia.Value.ToString("#,##") đ</b>
+                                <span style="color: #888888;" class="text-12">
+                                    [Giá đã có VAT]
+                                </span>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            
+            <div class="product-content-right-product-button">
+                <button>
+                    <b class="d-block">ĐẶT MUA NGAY</b>
+                    <span class="d-block">Nhanh chóng, thuận tiện</span>
+                </button>
+                <button>
+                    <b class="d-block">CHO VÀO GIỎ</b>
+                    <span class="d-block">Mua tiếp sản phẩm khác</span>
+                </button>
+            </div>
+            <div class="product-content-right-bottom">
+
+            </div>
+
+        </div>
+    </div>
+</div>
+

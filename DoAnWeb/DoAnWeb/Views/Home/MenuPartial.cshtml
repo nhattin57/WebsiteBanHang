@@ -13,13 +13,14 @@
                     {
                         if (item.Key != null)
                         {
-                            <li><a href="">@item.Key.TenNSX</a></li>
+                            <li><a href="@Url.Action("SanPham","SanPham",new {@MaLoaiSP=groupItem.Key.MaLoaiSP,@MaNSX=item.Key.MaNSX })">@item.Key.TenNSX</a></li>
                         }
                     }
                 </ul>
             </li>
         }
     }
-
+    <li><a href="">BẢO HÀNH</a></li>
+    <li><a href="">CHÍNH SÁCH - HƯỚNG DẪN</a></li>
 </div>
 

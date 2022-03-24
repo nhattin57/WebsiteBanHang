@@ -1,4 +1,4 @@
-namespace DoAnWeb.Models
+﻿namespace DoAnWeb.Models
 {
     using System;
     using System.Collections.Generic;
@@ -19,22 +19,27 @@ namespace DoAnWeb.Models
         [Key]
         public int MaThanhVien { get; set; }
 
+        [Required(ErrorMessage = " Vui lòng nhập tài khoản")]
         [StringLength(100)]
         public string TaiKhoan { get; set; }
 
+        [Required(ErrorMessage = "Vui lòng nhập mật khẩu")]
         [StringLength(100)]
         public string MatKhau { get; set; }
-
-        [StringLength(100)]
+        [Required(ErrorMessage = "Vui lòng nhập họ tên")]
+        [StringLength(100,ErrorMessage ="Họ tên không quá 100 ký tự")]
         public string HoTen { get; set; }
 
         [StringLength(255)]
+       
         public string DiaChi { get; set; }
 
         [StringLength(12)]
         public string SoDienThoai { get; set; }
 
         [StringLength(255)]
+        [Required(ErrorMessage = "Vui lọng nhập email")]
+        [RegularExpression(@"^([\w\.\-]+)@([\w\-]+)((\.(\w){2,3})+)$", ErrorMessage = "Email không đúng định dạng")]
         public string Email { get; set; }
 
         public string CauHoi { get; set; }

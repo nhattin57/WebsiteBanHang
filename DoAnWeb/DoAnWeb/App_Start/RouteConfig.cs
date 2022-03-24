@@ -11,7 +11,13 @@ namespace DoAnWeb
     {
         public static void RegisterRoutes(RouteCollection routes)
         {
+            //duong dan trang chi tiet san pham co tham so
             routes.IgnoreRoute("{resource}.axd/{*pathInfo}");
+            routes.MapRoute(
+               name: "XemChiTiet",
+               url: "{tensp}-{id}",
+               defaults: new { controller = "SanPham", action = "XemChiTiet", id = UrlParameter.Optional }
+           );
 
             routes.MapRoute(
                 name: "Default",

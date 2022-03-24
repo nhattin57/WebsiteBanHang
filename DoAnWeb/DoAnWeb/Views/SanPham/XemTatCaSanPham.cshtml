@@ -5,7 +5,7 @@
 
 @{
     ViewBag.Title = "XemTatCaSanPham";
-    Layout = "~/Views/Layouts/HomeLayout.cshtml";
+    Layout = "~/Views/Layouts/HeaderAndFooterLayout.cshtml";
 }
 
 
@@ -19,9 +19,9 @@
             @foreach (var item in Model)
             {
                 <div class="p-item">
-                    <img src="@Url.Content("~/Content/images/"+item.HinhAnh)" height="200" width="200" alt="">
+                    <a href="@Url.RouteUrl("XemChiTiet",new { @id=item.MaSP,@tensp=item.TenSP})"><img src="@Url.Content("~/Content/images/"+item.HinhAnh)" height="200" width="200" alt=""></a>
                     <h1 class="p-sku" style="font-size: 12px;">Mã SP @item.MaSP</h1>
-                    <a href="" class="p-name" style="font-weight:bold">@item.TenSP</a>
+                    <a href="@Url.RouteUrl("XemChiTiet",new { @id=item.MaSP,@tensp=item.TenSP})" class="p-name" style="font-weight:bold">@item.TenSP</a>
                     <div class="price-container">
                         @{
                             decimal temp = item.DonGia.Value * 100 / 80;
