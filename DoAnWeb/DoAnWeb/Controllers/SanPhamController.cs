@@ -79,5 +79,10 @@ namespace DoAnWeb.Controllers
 
             return View(lstSP.OrderBy(n => n.MaSP).ToPagedList(PageNumber, PageSize));
         }
+        public ActionResult DangXuat()
+        {
+            Session["DangNhap"] = null;
+            return RedirectToAction("Index","Home");
+        }
     }
 }

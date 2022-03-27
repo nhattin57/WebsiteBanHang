@@ -13,7 +13,7 @@ namespace DoAnWeb.Models
         public int SoLuong { get; set; }
         public decimal DonGia { get; set; }
         public decimal ThanhTien { get; set; }
-        
+        public string HinhAnh { get; set; }
         public ItemGioHang()
         {
 
@@ -29,6 +29,7 @@ namespace DoAnWeb.Models
                 this.SoLuong = 1;
                 this.DonGia = sp.DonGia.Value;
                 this.ThanhTien = SoLuong * DonGia;
+                this.HinhAnh = sp.HinhAnh;
             }
         }
         public ItemGioHang(int masp, int soluong)
@@ -41,6 +42,7 @@ namespace DoAnWeb.Models
                 this.SoLuong = soluong;
                 this.DonGia = sp.DonGia.Value;
                 this.ThanhTien = SoLuong * DonGia;
+                this.HinhAnh = sp.HinhAnh;
             }
         }
     }

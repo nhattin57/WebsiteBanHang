@@ -57,7 +57,7 @@
         {
             ThanhVien tv = (ThanhVien)Session["DangNhap"];
             <li style="font-weight:bold">Chào @tv.HoTen</li>
-            <li> @Html.ActionLink("Đăng Xuất", "DangXuat", "Home",new { @class="dangxuat"})</li>
+            <li> @Html.ActionLink("Đăng Xuất", "DangXuat", "Home", new { @class = "dangxuat" })</li>
         }
         else
         {
@@ -65,10 +65,12 @@
         }
 
         @*End Dang Nhap*@
-        <li>
+        @Html.Action("GioHangPartial", "GioHang")
+
+        @*<li>
             <a class="fa fa-shopping-bag" href=""></a>
             <b id="count_shopping_cart_store" class="cart_counter_new">0</b>
-        </li>
+        </li>*@
     </div>
     </header>
     <!----end-menu----------->

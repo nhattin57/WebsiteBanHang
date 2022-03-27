@@ -1,4 +1,4 @@
-namespace DoAnWeb.Models
+﻿namespace DoAnWeb.Models
 {
     using System;
     using System.Collections.Generic;
@@ -19,15 +19,19 @@ namespace DoAnWeb.Models
         public int MaKH { get; set; }
 
         [StringLength(100)]
+        [Required(ErrorMessage ="Vui lòng nhập tên khách hàng")]
         public string TenKH { get; set; }
 
         [StringLength(100)]
+        [Required(ErrorMessage ="Vui lòng nhập địa chỉ")]
         public string DiaChi { get; set; }
 
         [StringLength(255)]
         public string Email { get; set; }
 
         [StringLength(255)]
+        [Required(ErrorMessage = "Vui lòng nhập số điện thoại")]
+        
         public string SoDienThoai { get; set; }
 
         public int? MaThanhVien { get; set; }

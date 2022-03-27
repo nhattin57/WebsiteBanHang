@@ -248,3 +248,4 @@ E:\WEB_PROJECT\WebsiteBanHang\DoAnWeb\DoAnWeb\bin\PagedList.dll
 E:\WEB_PROJECT\WebsiteBanHang\DoAnWeb\DoAnWeb\bin\PagedList.Mvc.dll
 E:\WEB_PROJECT\WebsiteBanHang\DoAnWeb\DoAnWeb\bin\PagedList.xml
 E:\WEB_PROJECT\WebsiteBanHang\DoAnWeb\DoAnWeb\bin\PagedList.Mvc.xml
+E:\WEB_PROJECT\WebsiteBanHang\DoAnWeb\DoAnWeb\obj\Debug\DoAnWeb.csproj.AssemblyReference.cache
