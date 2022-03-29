@@ -49,8 +49,13 @@
 
         @*</div>*@
     
-    <div  class="others">
-        <li><input placeholder="Tìm kiếm" type="text"> <i class="fa fa-search"></i></li>
+    <div class="others">
+        @using (Html.BeginForm("LayTuKhoa", "TimKiem"))
+        {
+            <li><input placeholder="Tìm kiếm" type="text" name="tukhoa"> <input type="submit" value="Tìm" /></li>
+            @*<li><input type="submit" value="Tim Kiem"/></li>*@
+        }
+        
 
         @* Dang Nhap*@
         @if (Session["DangNhap"] != null && Session["DangNhap"] != "")
