@@ -34,6 +34,7 @@ namespace DoAnWeb.Controllers
             return View(lstSP);
         }
         //Xay dung trang chi tiet san pham
+        
         public ActionResult XemChiTiet(int? id)
         {
             // kiem tra id co duoc truyen vao hay k

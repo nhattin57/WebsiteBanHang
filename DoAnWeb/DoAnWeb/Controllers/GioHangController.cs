@@ -9,6 +9,8 @@ namespace DoAnWeb.Controllers
     public class GioHangController : Controller
     {
         WebSiteBanHangModel db = new WebSiteBanHangModel();
+        public static bool datHangthanhcong = false;
+       
         // GET: GioHang
         public ActionResult GioHangPartial()
         {
@@ -129,7 +131,12 @@ namespace DoAnWeb.Controllers
            
             //Lay item gio hang
             List<ItemGioHang> listGioHang = LayGioHang();
-
+           
+            if (datHangthanhcong == true)
+            {
+                ViewBag.DatHangThanhCong = "Dat hang thanh cong";
+                datHangthanhcong = false;
+            }
             return View(listGioHang);
         }
 
@@ -174,6 +181,11 @@ namespace DoAnWeb.Controllers
             {
                 // thêm khách hàng vào bảng kh
                 khachhang = kh;
+                if(khachhang.DiaChi==null || khachhang.SoDienThoai==null ||khachhang.TenKH==null)
+                {
+                   
+                    return RedirectToAction("XemGioHang");
+                }
                 db.KhachHangs.Add(khachhang);
                 db.SaveChanges();
             }
@@ -211,7 +223,7 @@ namespace DoAnWeb.Controllers
             }
             db.SaveChanges();
             Session["GioHang"] = null;
-            ViewBag.DatHangThanhCong = "Đặt Hàng Thành Công";
+            datHangthanhcong = true;
             return RedirectToAction("XemGioHang");
         }
         public ActionResult DangXuat()

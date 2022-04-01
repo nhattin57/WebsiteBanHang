@@ -124,25 +124,26 @@
                             <div class="delivery-content-left-input-top row">
                                 <div class="delivery-content-left-input-top-item">
                                     <label for="">Họ tên<span style="color: red;">*</span></label>
-                                    <input type="text" value="@tv.HoTen" name="TenKH">
+                                    <input type="text" value="@tv.HoTen" name="TenKH" class="tenkh">
                                 </div>
                                 <div class="delivery-content-left-input-top-item">
                                     <label for="">Điện thoại<span style="color: red;">*</span></label>
-                                    <input type="number" value="@tv.SoDienThoai" name="SoDienThoai">
+                                    <input type="number" value="@tv.SoDienThoai" name="SoDienThoai" class="sodienthoai">
                                 </div>
 
                                 <div class="delivery-content-left-input-top-item">
                                     <label for="">Địa chỉ<span style="color: red;">*</span></label>
-                                    <input type="text" value="@tv.DiaChi" name="DiaChi" >
+                                    <input type="text" value="@tv.DiaChi" name="DiaChi" class="diachi">
                                 </div>
                                 <div class="delivery-content-left-button row">
                                     <a href=""><span>«</span><p>Tiếp tục mua hàng</p></a>
-                                    <button type="submit" style="font-weight: bold;">Đặt Hàng</button>
+                                    <button class="dathang" type="submit" style="font-weight: bold;">Đặt Hàng</button>
                                 </div>
                             </div>
 
                         </div>
                     </div>
+                    <h1>@ViewBag.Error</h1>
             </section>
             }
         }
@@ -158,20 +159,20 @@
                             <div class="delivery-content-left-input-top row">
                                 <div class="delivery-content-left-input-top-item">
                                     <label for="">Họ tên<span style="color: red;">*</span></label>
-                                    <input type="text" value="" name="TenKH">
+                                    <input type="text" value="" name="TenKH" class="tenkh">
                                 </div>
                                 <div class="delivery-content-left-input-top-item">
                                     <label for="">Điện thoại<span style="color: red;">*</span></label>
-                                    <input type="number" value="" name="SoDienThoai">
+                                    <input type="number" value="" name="SoDienThoai" class="sodienthoai">
                                 </div>
 
                                 <div class="delivery-content-left-input-top-item">
                                     <label for="">Địa chỉ<span style="color: red;">*</span></label>
-                                    <input type="text" value="" name="DiaChi">
+                                    <input type="text" value="" name="DiaChi" class="diachi">
                                 </div>
                                 <div class="delivery-content-left-button row">
                                     
-                                    <button type="submit" style="font-weight: bold;">Đặt Hàng</button>
+                                    <button class="dathang" type="submit" style="font-weight: bold;">Đặt Hàng</button>
                                 </div>
                             </div>
 
@@ -185,3 +186,21 @@
     else
     {
     }
+    <script>
+        $(".dathang").click(function () {
+            var tenkh = $(".tenkh").val().toString();
+            alert(tenkh)
+            return false;
+            //var sdt = $(".sodienthoai").val().toString();
+            //var diachi = $(".diachi").val().toString();
+            //if (tenkh == "" || sdt == "" || diachi == "") {
+            //    alert("Vui long nhap du thong tin")
+            //    return false;
+            //}
+            //if (isNaN(sdt) == true) {
+            //    alert("So dien thoai khong dung")
+            //    return false;
+            //}
+
+        });
+    </script>
