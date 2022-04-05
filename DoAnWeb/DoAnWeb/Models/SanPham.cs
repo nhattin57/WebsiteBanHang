@@ -28,7 +28,7 @@
 
         public decimal? DonGia { get; set; }
         [Display(Name = "Ngày Cập Nhật")]
-        [Required(ErrorMessage = "Vui Lòng Nhập Ngày cập nhật")]
+        
         public DateTime? NgayCapNhap { get; set; }
         [Display(Name = "Cấu Hình")]
 
@@ -36,9 +36,10 @@
         [Display(Name = "Mô Tả")]
         [Required(ErrorMessage = "Nhập Mô Tả")]
         public string MoTa { get; set; }
-        [Display(Name ="Hình Ảnh")]
-        [Required(ErrorMessage = "Chọn Hình Anh")]
+
+        [Required]
         public string HinhAnh { get; set; }
+
         [Display(Name = "Số Lượng Tồn")]
         [Required]
         public int? SoLuongTon { get; set; }
@@ -54,7 +55,7 @@
         [Display(Name = "Số Lần Mua")]
 
         public int? SoLanMua { get; set; }
-        [Display(Name = "Mới")]
+        [Display(Name = "Mới (Mới=1, Cũ=0)")]
 
         public int? Moi { get; set; }
         [Display(Name = "Nhà Cung Cấp")]
@@ -64,7 +65,7 @@
         [Display(Name = "Loại Sản Phẩm")]
         public int? MaLoaiSP { get; set; }
         [Display(Name = "Đã Xóa")]
-        [Required]
+        
         public bool? DaXoa { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]

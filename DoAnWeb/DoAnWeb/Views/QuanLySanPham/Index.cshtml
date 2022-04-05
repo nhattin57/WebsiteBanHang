@@ -21,8 +21,7 @@
     grid.Column("MoTa", "MOTA", format: p => Html.Raw(p.MoTa)),
     grid.Column("SoLuongTon", "So Luong Ton")/*, format: p => Html.Raw(p.MoTa))*/,
     grid.Column("HinhAnh", "HinhAnh", format: p => Html.Raw("<img src=\"../Content/images/" + p.HinhAnh + "\" >")),
-    grid.Column(format: p => Html.ActionLink("Chinh sua", "ChinhSua", new { @id = p.MaSP })),
-    grid.Column(format: p => Html.ActionLink("Xóa", "Xoa", new { @id = p.MaSP }))
+    grid.Column(format: p => Html.ActionLink("Chinh sua", "ChinhSua", new { @id = p.MaSP }))
     ))
 
 <style>
@@ -30,8 +29,11 @@
         text-align: center;
         border: 1px solid;
     }
-    .gridhead{
-        padding:5px 5px;
+    .gridhead {
+        border: 1px solid;
+    }
+    .gridhead {
+        padding: 5px 5px;
     }
     .gridAltRow img,
     .gridRow img {
@@ -46,8 +48,5 @@
         background-color: #ccc
     }
 
-    .admin-content-left {
-        background-color: lawngreen;
-        
-    }
+   
 </style>

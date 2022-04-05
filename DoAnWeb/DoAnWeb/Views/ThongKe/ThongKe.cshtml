@@ -1,0 +1,63 @@
+﻿
+@{
+    ViewBag.Title = "ThongKe";
+    Layout = "~/Views/Layouts/AdminLayout.cshtml";
+}
+<div class="container">
+    <div class="box-4">
+        <h1 class="number item">@ViewBag.TongDonDatHang</h1>
+        <h3 class="diengiai">Tổng Đơn Hàng</h3>
+    </div>
+    <div class="box-4 blue">
+        <h1 class="number">@ViewBag.SoNguoiDangOnline</h1>
+        <h3 class="diengiai">Đang Online</h3>
+    </div>
+    <div class="box-4 violet">
+        <h1 class="number">@ViewBag.SoNguoiTruyCap</h1>
+        <h3 class="diengiai">Số Người Đã Truy Cập</h3>
+    </div>
+    <div class="box-4 green">
+        <h1 class="number">@ViewBag.TongDoanhThu.ToString("#,##")</h1>
+        <h3 class="diengiai">Tổng Doanh Thu(VNĐ)</h3>
+    </div>
+</div>
+<style>
+    .box-4{
+        display:block;
+        width:25%;
+        height:200px;
+        background-color:orangered;
+        margin: 0 5px;
+
+    }
+    .container{
+        display:flex;
+    }
+    .number {
+        color: #fff;
+        text-align: center;
+    }
+    .container .number{
+        margin: 25% 25%;
+    }
+   
+    h3{
+        color:#000;
+        font-weight:bold;
+        display:block;
+    }
+    .diengiai{
+        text-align:center;
+        margin-bottom:10px;
+    }
+    .green{
+        background-color:#0cf044;
+        
+    }
+    .blue{
+        background-color:#308cef;
+    }
+    .violet{
+        background-color:violet;
+    }
+</style>
