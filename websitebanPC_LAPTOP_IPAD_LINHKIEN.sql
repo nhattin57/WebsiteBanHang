@@ -162,6 +162,7 @@ insert into NhaSanXuat values(N'Cáp sạc',N'AMERICA','abc')
 --
 insert into LoaiThanhVien values(N'Thường',0)
 insert into LoaiThanhVien values(N'VIP',10)
+insert into LoaiThanhVien values(N'admin',100)
 --
 insert into ThanhVien 
 values(N'nhattin',N'nhattin',N'Đào Nhật Tín',N'Tuy An - Phú Yên','0384480806',N'nhattin57@gmail.com',
@@ -169,6 +170,9 @@ N'Bạn có thích chó không',N'Có',2)
 insert into ThanhVien 
 values(N'trungthanh',N'trungthanh',N'Nguyễn Trung Thành',N'Hà Nội','0357894126',N'trungthanh@gmail.com',
 N'Bạn có thích chó không',N'Có',1)
+insert into ThanhVien 
+values(N'admin',N'admin',N'Đào Nhật Tín',N'Phú Yên','0357894126',N'nhattin57@gmail.com',
+N'Bạn có thích chó không',N'Có',3)
 --
 
 insert into KhachHang values(N'Nhan Như Ngọc',N'Nha Trang',N'nhungoc@gmail.com','0257444888',1)

@@ -87,6 +87,11 @@ namespace DoAnWeb.Controllers
                 ViewBag.NhapDuThongTin = "Vui lòng Nhập đủ Thông Tin ";
                 return View();
             }
+            ThanhVien admin = db.ThanhViens.SingleOrDefault(n => n.TaiKhoan == taikhoan && n.MatKhau == matkhau && n.MaLoaiTV == 3);
+            if (admin != null)
+            {
+               return RedirectToAction("Index", "QuanLySanPham");
+            }
             ThanhVien tv = db.ThanhViens.SingleOrDefault(n => n.TaiKhoan == taikhoan && n.MatKhau == matkhau);
             if(tv == null)
             {

@@ -11,6 +11,7 @@ namespace DoAnWeb.Controllers
     {
         // GET: QuanLySanPham
         WebSiteBanHangModel db = new WebSiteBanHangModel();
+        
         public ActionResult Index()
         {
             return View(db.SanPhams.Where(n => n.DaXoa == false));
