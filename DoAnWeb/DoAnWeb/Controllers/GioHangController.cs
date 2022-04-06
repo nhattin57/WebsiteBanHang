@@ -197,6 +197,7 @@ namespace DoAnWeb.Controllers
                 khachhang.DiaChi = tv.DiaChi;
                 khachhang.SoDienThoai = tv.SoDienThoai;
                 khachhang.MaThanhVien = tv.MaLoaiTV;
+                khachhang.Email = tv.Email;
                 db.KhachHangs.Add(khachhang);
                 db.SaveChanges();
             }
