@@ -1,0 +1,52 @@
+﻿@using DoAnWeb.Models;
+@model IEnumerable<SanPham>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Layouts/AdminLayout.cshtml";
+    WebGrid grid = new WebGrid(source: Model, rowsPerPage: 10);
+}
+
+@* THE HIEN DU LIEU THONG QUA CONTROL WEBGRID *@
+@grid.GetHtml(
+    tableStyle: "gridTable table", // the table
+    headerStyle: "gridhead", //the header
+    footerStyle: "gridFooter", //the phan trang
+    rowStyle: "gridRow",       //hang le
+    alternatingRowStyle: "gridAltRow", //hang chan
+    columns: grid.Columns(
+    grid.Column("MaSP", "MaSP"),
+    grid.Column("TenSP", "TENSP"),
+    grid.Column("DonGia", "Don Gia"),
+    grid.Column("MoTa", "MOTA", format: p => Html.Raw(p.MoTa)),
+    grid.Column("SoLuongTon", "So Luong Ton")/*, format: p => Html.Raw(p.MoTa))*/,
+    grid.Column("HinhAnh", "HinhAnh", format: p => Html.Raw("<img src=\"../Content/images/" + p.HinhAnh + "\" >")),
+    grid.Column(format: p => Html.ActionLink("Chinh sua", "ChinhSua", new { @id = p.MaSP }))
+    ))
+
+<style>
+    .gridTable {
+        text-align: center;
+        border: 1px solid;
+    }
+    .gridhead {
+        border: 1px solid;
+    }
+    .gridhead {
+        padding: 5px 5px;
+    }
+    .gridAltRow img,
+    .gridRow img {
+        height: 150px;
+        width: 150px;
+    }
+    .gridhead >col{
+        margin-left:3px;
+        margin-right:3px;
+    }
+    .gridAltRow {
+        background-color: #ccc
+    }
+
+   
+</style>

@@ -1,0 +1,57 @@
+﻿@using DoAnWeb.Models;
+@using PagedList.Mvc;
+@model PagedList.IPagedList<SanPham>
+
+@{
+    ViewBag.Title = "SanPham";
+    Layout = "~/Views/Layouts/HeaderAndFooterLayout.cshtml";
+}
+
+
+<section class="container">
+    <div class="home-pro-hot box-pro-container bg-white pb-2">
+        <div class="box-title-container">
+            <h2 class="box-title">Tất cả @Model.First().LoaiSanPham.TenLoai</h2>
+        </div>
+
+        <div class="p-container" style="min-height: 700px">
+            <div class="d-flex flex-wrap">
+                @foreach (var item in Model)
+                {
+                    <div class="p-item">
+                        <a href="@Url.Action("XemChiTiet","SanPham",new { @id=item.MaSP})"> <img src="@Url.Content("~/Content/images/"+item.HinhAnh)" height="200" width="200" alt=""></a>
+                        <h1 class="p-sku" style="font-size: 12px;">Mã SP @item.MaSP</h1>
+                        <a href="@Url.Action("XemChiTiet","SanPham",new { @id=item.MaSP})" class="p-name" style="font-weight:bold">@item.TenSP</a>
+                        <div class="price-container">
+                            @{
+                                decimal temp = item.DonGia.Value * 100 / 80;
+                            }
+                            <del class="p-old-price"> @temp.ToString("#,##") đ </del>
+                            <span class="p-discount"> -20% </span>
+                            <span class="p-price"> @item.DonGia.Value.ToString("#,##") đ</span>
+                        </div>
+                    </div>
+                }
+            </div>
+        </div>
+    </div>
+    <div class="phantrang">
+        Trang @(Model.PageCount< Model.PageNumber ? 0:Model.PageNumber )/@Model.PageCount
+        @Html.PagedListPager(Model, page => Url.Action("SanPham", new { page = page, @MaNSX = @ViewBag.MaNSX, @MaLoaiSP= @ViewBag.MaLoaiSP }))
+
+    </div>
+</section>
+    
+<style>
+    .pagination{
+        display:flex;
+    }
+    pagination li {
+        padding-left: 5px;
+        padding-right: 5px;
+    }
+    .active {
+        padding-left: 5px;
+        padding-right: 5px;
+    }
+</style>

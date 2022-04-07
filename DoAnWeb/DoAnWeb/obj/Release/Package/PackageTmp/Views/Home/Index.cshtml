@@ -1,0 +1,22 @@
+﻿@using DoAnWeb.Models;
+
+@model IEnumerable<SanPham>
+
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Layouts/HomeLayout.cshtml";
+}
+
+@{
+    IEnumerable<SanPham> listDienThoaiMoi = ViewBag.listDienThoaiMoi as IEnumerable<SanPham>;
+    IEnumerable<SanPham> listLaptopMoi = ViewBag.listLaptopMoi as IEnumerable<SanPham>;
+    IEnumerable<SanPham> listMayTinhBangMoi = ViewBag.listMayTinhBangMoi as IEnumerable<SanPham>;
+    IEnumerable<SanPham> listPhuKien = ViewBag.listPhuKien as IEnumerable<SanPham>;
+}
+<section class="container">
+    @Html.Partial("~/Views/SanPham/SanPhamStylePartial.cshtml", listDienThoaiMoi)
+    @Html.Partial("~/Views/SanPham/SanPhamStylePartial.cshtml", listLaptopMoi)
+    @Html.Partial("~/Views/SanPham/SanPhamStylePartial.cshtml", listMayTinhBangMoi)
+    @Html.Partial("~/Views/SanPham/SanPhamStylePartial.cshtml", listPhuKien)
+</section>
