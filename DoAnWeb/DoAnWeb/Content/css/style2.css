@@ -2,16 +2,25 @@
 }
 .menu > li a {
     font-size: 16px;
-   
 }
+
 .others {
     font-size: 16px;
 }
+
 .p-name {
     font-size: 14px;
-  
 }
+
 .p-price {
-   
     font-weight: bold;
+}
+
+.search {
+    width: 250px;
+    height: 25px;
+}
+
+.btntim {
+    padding: 5px;
 }
