@@ -24,3 +24,31 @@
 .btntim {
     padding: 5px;
 }
+
+element.style {
+}
+
+.home-pro-hot .p-item  {
+    width: calc(100% / 5);
+    padding: 10px 20px 7px 10px;
+    background-color: #FFF;
+    margin-bottom: 15px;
+    margin-left: 70px;
+    border: 1px solid #FFF;
+    box-shadow: 0 1px 3px rgb(0 0 0 / 30%);
+}
+
+element.style {
+}
+
+img {
+    height: auto;
+    vertical-align: middle;
+    border-style: none;
+    width: 85%;
+}
+
+.product-content-left-big-img img {
+    width: 70%;
+    margin-left: 90px;
+}
