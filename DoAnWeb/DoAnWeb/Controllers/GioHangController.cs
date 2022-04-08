@@ -10,7 +10,7 @@ namespace DoAnWeb.Controllers
     {
         WebSiteBanHangModel db = new WebSiteBanHangModel();
         public static bool datHangthanhcong = false;
-       
+        public static string ChuaNhapDu = "Chưa nhập đủ thông tin";
         // GET: GioHang
         public ActionResult GioHangPartial()
         {
@@ -134,8 +134,14 @@ namespace DoAnWeb.Controllers
            
             if (datHangthanhcong == true)
             {
+                ChuaNhapDu = "";
+                ViewBag.error = ChuaNhapDu;
                 ViewBag.DatHangThanhCong = "Dat hang thanh cong";
                 datHangthanhcong = false;
+            }
+            else
+            {
+                ViewBag.error = ChuaNhapDu;
             }
             return View(listGioHang);
         }
@@ -181,9 +187,10 @@ namespace DoAnWeb.Controllers
             {
                 // thêm khách hàng vào bảng kh
                 khachhang = kh;
-                if(khachhang.DiaChi==null || khachhang.SoDienThoai==null ||khachhang.TenKH==null)
+                if(khachhang.DiaChi==null || khachhang.SoDienThoai==null ||khachhang.TenKH==null ||khachhang.Email==null)
                 {
-                   
+                    datHangthanhcong = false;
+                    ChuaNhapDu = "Vui long nhap du thong tin";
                     return RedirectToAction("XemGioHang");
                 }
                 db.KhachHangs.Add(khachhang);
@@ -194,8 +201,8 @@ namespace DoAnWeb.Controllers
             {
                 ThanhVien tv = Session["DangNhap"] as ThanhVien;
                 khachhang.TenKH = tv.HoTen;
-                khachhang.DiaChi = kh.DiaChi;
-                khachhang.SoDienThoai = kh.SoDienThoai;
+                khachhang.DiaChi = tv.DiaChi;
+                khachhang.SoDienThoai = tv.SoDienThoai;
                 khachhang.MaThanhVien = tv.MaLoaiTV;
                 khachhang.Email = tv.Email;
                 db.KhachHangs.Add(khachhang);

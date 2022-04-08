@@ -14,13 +14,14 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
     <link href="~/Content/css/style1.css" rel="stylesheet" />
-   
+    <link href="~/Content/css/style2.css" rel="stylesheet" />
     <script src="~/Content/js/simpleCart.min.js"></script>
     <script src="~/Scripts/jquery.validate.unobtrusive.min.js"></script>
     <link href="~/Content/css/flexslider.css" rel="stylesheet" />
     <script src="~/Scripts/jquery.unobtrusive-ajax.js"></script>
     <script src="~/Scripts/jquery.unobtrusive-ajax.min.js"></script>
     <script src="~/Scripts/jquery.validate.unobtrusive.js"></script>
+
 </head>
 <body>
     <!----------Menu-------->
@@ -53,7 +54,7 @@
     <div class="others">
         @using (Html.BeginForm("LayTuKhoa", "TimKiem"))
         {
-            <li><input placeholder="Tìm kiếm" type="text" name="tukhoa"> <input type="submit" value="Tìm" /></li>
+            <li><input placeholder="Tìm kiếm" type="text" name="tukhoa" class="form-control-feedback"> <input type="submit" value="Tìm" /></li>
             @*<li><input type="submit" value="Tim Kiem"/></li>*@
         }
         

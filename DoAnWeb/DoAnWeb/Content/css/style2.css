@@ -1,0 +1,17 @@
+﻿body {
+}
+.menu > li a {
+    font-size: 16px;
+   
+}
+.others {
+    font-size: 16px;
+}
+.p-name {
+    font-size: 14px;
+  
+}
+.p-price {
+   
+    font-weight: bold;
+}

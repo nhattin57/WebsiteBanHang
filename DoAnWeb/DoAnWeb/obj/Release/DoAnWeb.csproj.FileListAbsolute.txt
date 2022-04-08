@@ -80,7 +80,7 @@ E:\WEB_PROJECT\WebsiteBanHang\DoAnWeb\DoAnWeb\bin\System.Web.WebPages.Razor.xml
 E:\WEB_PROJECT\WebsiteBanHang\DoAnWeb\DoAnWeb\bin\Newtonsoft.Json.xml
 E:\WEB_PROJECT\WebsiteBanHang\DoAnWeb\DoAnWeb\bin\Antlr3.Runtime.pdb
 E:\WEB_PROJECT\WebsiteBanHang\DoAnWeb\DoAnWeb\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
-E:\WEB_PROJECT\WebsiteBanHang\DoAnWeb\DoAnWeb\obj\Release\DoAnWeb.csproj.AssemblyReference.cache
 E:\WEB_PROJECT\WebsiteBanHang\DoAnWeb\DoAnWeb\obj\Release\DoAnWeb.csproj.CoreCompileInputs.cache
 E:\WEB_PROJECT\WebsiteBanHang\DoAnWeb\DoAnWeb\obj\Release\DoAnWeb.dll
 E:\WEB_PROJECT\WebsiteBanHang\DoAnWeb\DoAnWeb\obj\Release\DoAnWeb.pdb
+E:\WEB_PROJECT\WebsiteBanHang\DoAnWeb\DoAnWeb\obj\Release\DoAnWeb.csproj.AssemblyReference.cache

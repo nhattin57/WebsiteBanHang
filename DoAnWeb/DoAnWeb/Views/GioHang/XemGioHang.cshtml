@@ -139,6 +139,7 @@
                                     <label for="">Email<span style="color: red;">*</span></label>
                                     <input type="email" value="@tv.Email" name="Email" class="email">
                                 </div>
+                                <h1>@ViewBag.error</h1>
                                 <div class="delivery-content-left-button row">
                                     <a href=""><span>«</span><p>Tiếp tục mua hàng</p></a>
                                     <button class="dathang" type="submit" style="font-weight: bold;">Đặt Hàng</button>
@@ -147,7 +148,7 @@
 
                         </div>
                     </div>
-                    <h1>@ViewBag.Error</h1>
+                    
             </section>
             }
         }
@@ -179,7 +180,7 @@
                                     <input type="email" value="" name="Email" class="email">
                                 </div>
                                 <div class="delivery-content-left-button row">
-
+                                    <h1 style="color:red; margin-right:20px;" >@ViewBag.error</h1>
                                     <button class="dathang" type="submit" style="font-weight: bold;">Đặt Hàng</button>
                                 </div>
                             </div>
@@ -196,9 +197,9 @@
     }
     <script>
         $(".dathang").click(function () {
-            var tenkh = $(".tenkh").val().toString();
+            var tenkh = $("#tenkh").val();
             alert(tenkh)
-            return false;
+            
             //var sdt = $(".sodienthoai").val().toString();
             //var diachi = $(".diachi").val().toString();
             //if (tenkh == "" || sdt == "" || diachi == "") {
@@ -210,5 +211,5 @@
             //    return false;
             //}
 
-        });
+        })
     </script>

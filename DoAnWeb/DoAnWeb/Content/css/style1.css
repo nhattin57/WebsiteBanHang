@@ -54,7 +54,7 @@ a {
 }
 
 .menu > li a {
-  font-size: 13px;
+  font-size: 16px;
   font-weight: bold;
   display: block;
   line-height: 25px;
@@ -296,7 +296,7 @@ img {
 
 .p-name {
   display: block;
-  font-size: 13px;
+  font-size: 18px;
   height: 38px;
   overflow: hidden;
 }
@@ -331,6 +331,7 @@ img {
   font-size: 18px;
   color: #ce0707;
   font-weight: 500;
+  font-weight:bold;
 }
 
 .box-pro-container .view-all {
