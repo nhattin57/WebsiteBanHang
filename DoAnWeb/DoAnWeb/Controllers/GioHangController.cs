@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Text.RegularExpressions;
 using System.Web;
 using System.Web.Mvc;
 using DoAnWeb.Models;
@@ -191,6 +192,22 @@ namespace DoAnWeb.Controllers
                 {
                     datHangthanhcong = false;
                     ChuaNhapDu = "Vui long nhap du thong tin";
+                    return RedirectToAction("XemGioHang");
+                }
+                if (kh.SoDienThoai.Length > 12)
+                {
+                    datHangthanhcong = false;
+                    ChuaNhapDu = "Số điện thoại không đúng";
+                    return RedirectToAction("XemGioHang");
+                }
+                var email = kh.Email;
+                //kiểm tra định dạng email
+                string match = @"\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*";
+                Regex reg = new Regex(match);
+                if (reg.IsMatch(email)==false)
+                {
+                    datHangthanhcong = false;
+                    ChuaNhapDu = "Email sai định dạng";
                     return RedirectToAction("XemGioHang");
                 }
                 db.KhachHangs.Add(khachhang);
