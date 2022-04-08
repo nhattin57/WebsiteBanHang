@@ -194,8 +194,8 @@ namespace DoAnWeb.Controllers
             {
                 ThanhVien tv = Session["DangNhap"] as ThanhVien;
                 khachhang.TenKH = tv.HoTen;
-                khachhang.DiaChi = tv.DiaChi;
-                khachhang.SoDienThoai = tv.SoDienThoai;
+                khachhang.DiaChi = kh.DiaChi;
+                khachhang.SoDienThoai = kh.SoDienThoai;
                 khachhang.MaThanhVien = tv.MaLoaiTV;
                 khachhang.Email = tv.Email;
                 db.KhachHangs.Add(khachhang);
