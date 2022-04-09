@@ -33,6 +33,7 @@
         [StringLength(255)]
        [Required(ErrorMessage ="Vui Lòng nhập địa chỉ")]
         public string DiaChi { get; set; }
+
         [Required(ErrorMessage ="Vui lòng nhập số điện thoại")]
         [StringLength(12)]
         public string SoDienThoai { get; set; }

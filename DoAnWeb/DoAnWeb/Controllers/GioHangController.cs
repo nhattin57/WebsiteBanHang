@@ -137,7 +137,7 @@ namespace DoAnWeb.Controllers
             {
                 ChuaNhapDu = "";
                 ViewBag.error = ChuaNhapDu;
-                ViewBag.DatHangThanhCong = "Dat hang thanh cong";
+                ViewBag.DatHangThanhCong = "Đặt hàng thành công";
                 datHangthanhcong = false;
             }
             else
@@ -191,7 +191,7 @@ namespace DoAnWeb.Controllers
                 if(khachhang.DiaChi==null || khachhang.SoDienThoai==null ||khachhang.TenKH==null ||khachhang.Email==null)
                 {
                     datHangthanhcong = false;
-                    ChuaNhapDu = "Vui long nhap du thong tin";
+                    ChuaNhapDu = "Vui lòng nhập đủ thông tin";
                     return RedirectToAction("XemGioHang");
                 }
                 if (kh.SoDienThoai.Length > 12)

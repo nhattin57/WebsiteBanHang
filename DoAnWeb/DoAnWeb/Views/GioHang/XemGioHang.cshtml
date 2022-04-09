@@ -15,7 +15,7 @@
         </div>
     </div>
     <div class="cart-title">
-        <h1>Giỏ hàng</h1>
+        <h1>GIỎ HÀNG</h1>
     </div>
     <div class="cart-content row">
         <div class="cart-content-left row">
@@ -44,8 +44,8 @@
 
             @if (Model == null || Model.Count == 0)
             {
-                <div style="text-align:center"> <h1 style="color:green; text">@ViewBag.DatHangThanhCong</h1></div>
-                <div style="text-align:center"> <h1 style="color:red; text">Giỏ Hàng Rỗng</h1></div>
+                <div style="text-align: center; display: block; padding-left: 30px;"> <h1 style="color:green; text">@ViewBag.DatHangThanhCong</h1></div>
+                <div style="text-align: center; display: block; padding-left: 30px;"> <h1 style="color:red; text">Giỏ hàng rỗng</h1></div>
             }
             else
             {
@@ -139,9 +139,7 @@
                                     <label for="">Email<span style="color: red;">*</span></label>
                                     <input type="email" value="@tv.Email" name="Email" class="email">
                                 </div>
-                                <h1>@ViewBag.error</h1>
                                 <div class="delivery-content-left-button row">
-                                    <a href=""><span>«</span><p>Tiếp tục mua hàng</p></a>
                                     <button class="dathang" type="submit" style="font-weight: bold;">Đặt Hàng</button>
                                 </div>
                             </div>

@@ -1,0 +1,57 @@
+﻿@using DoAnWeb.Models;
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Danh mục sản phẩm</title>
+    <link rel="stylesheet" href="~/Content/admin/css/styleAdmin.css">
+    <script src="~/Scripts/bootstrap.js"></script>
+    <script src="~/Scripts/bootstrap.min.js"></script>
+    <link href="~/Content/bootstrap.css" rel="stylesheet" />
+    <link href="~/Content/bootstrap.min.css" rel="stylesheet" />
+    <script src="~/Scripts/jquery.validate.js"></script>
+    <script src="~/Scripts/jquery.validate.min.js"></script>
+    <script src="~/Scripts/jquery.validate.unobtrusive.js"></script>
+    <script src="~/Scripts/jquery.validate.unobtrusive.min.js"></script>
+    <link href="~/Content/bootstrap-theme.css" rel="stylesheet" />
+    <script src="~/Scripts/jquery-3.4.1.js"></script>
+    <script src="~/Scripts/jquery-3.4.1.min.js"></script>
+    <script src="~/Scripts/jquery-3.4.1.slim.js"></script>
+</head>
+<body>
+    <header>
+        <h1>ADMIN</h1>
+    </header>
+    <section class="admin-content">
+        <div class="admin-content-left">
+            <ul>
+                <li>
+                    <a href="@Url.Action("Index","QuanLySanPham")">Danh sách sản phẩm</a>
+                    <ul>
+                        <li><a href="@Url.Action("TaoMoiSanPham","QuanLySanPham")">Thêm Sản Phẩm</a></li>
+                    </ul>
+                </li>
+
+                <li>
+                    <a href="@Url.Action("NhapHang","QuanLyNhapHang")">Nhập Hàng</a>
+
+                </li>
+                <li><a href="@Url.Action("ChuaGiao","QuanLyDonHang")">Quản Lý Đơn Hàng</a></li>
+                <li><a href="@Url.Action("ThongKe","ThongKe")">Thống Kê</a></li>
+            </ul>
+        </div>
+        <div class="admin-content-right">
+           @RenderBody()
+        </div>
+    </section>
+    
+</body>
+</html>

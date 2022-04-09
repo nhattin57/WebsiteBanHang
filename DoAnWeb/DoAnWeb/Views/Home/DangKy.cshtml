@@ -7,60 +7,62 @@
 }
 
 <section id="signup">
-    @using (Html.BeginForm())
-    {
-        @Html.AntiForgeryToken()
-        <hr />
-        @Html.ValidationSummary(true)
+    <div class="form-signup">
+        @using (Html.BeginForm())
+        {
+            @Html.AntiForgeryToken()
+            
+            @Html.ValidationSummary(true)
 
-        <h1 class="form-heading"><span>Đăng ký</span></h1>
-        <div class="form-group">
-            <i class=""></i>
-            <input type="text" name="HoTen" class="form-input" placeholder="Họ Và Tên"><br />
+            <h1 class="form-heading"><span>ĐĂNG KÝ</span></h1>
+            <div class="form-group">
+                <i class=""></i>
+                <input type="text" name="HoTen" class="form-input" placeholder="Họ và tên"><br />
 
-        </div>
-        <div class="form-group">
-            <i class=""></i>
-            <input type="number" name="SoDienThoai" class="form-input" placeholder="So Dien Thoai"><br />
+            </div>
+            <div class="form-group">
+                <i class=""></i>
+                <input type="number" name="SoDienThoai" class="form-input" placeholder="Số điện thoại"><br />
 
-        </div>
-        <div class="form-group">
-            <i class=""></i>
-            <input type="text" name="DiaChi" class="form-input" placeholder="Dia Chi"><br />
+            </div>
+            <div class="form-group">
+                <i class=""></i>
+                <input type="text" name="DiaChi" class="form-input" placeholder="Địa chỉ"><br />
 
-        </div>
-        <div class="form-group">
-            <i class=""></i>
-            <input type="text" name="Email" class="form-input" placeholder="Email">
+            </div>
+            <div class="form-group">
+                <i class=""></i>
+                <input type="text" name="Email" class="form-input" placeholder="Email">
 
-        </div>
-        <div class="form-group">
-            <i class="fa fa-user"></i>
-            <input type="text" name="TaiKhoan" class="form-input" placeholder="Tài Khoản">
-        </div>
-        <div class="form-group">
-            <i class="fa fa-key"></i>
-            <input type="password" name="MatKhau" class="form-input" placeholder="Mật khẩu">
-        </div>
-        <div class="form-group">
-            <i class="fa fa-key"></i>
-            <input type="password" name="NhapLaiMatKhau" class="form-input" placeholder="Nhập lại mật khẩu">
-        </div>
-        <div>
-            <h3>@Html.ValidationMessageFor(n => n.HoTen)</h3>
-            <h3>@Html.ValidationMessageFor(n => n.Email)</h3>
-            <h3> @Html.ValidationMessageFor(n => n.TaiKhoan)</h3>
-            <h3> @Html.ValidationMessageFor(n => n.MatKhau)</h3>
-            <h3> @Html.ValidationMessageFor(n => n.SoDienThoai)</h3>
-            <h3> @Html.ValidationMessageFor(n => n.DiaChi)</h3>
+            </div>
+            <div class="form-group">
+                <i class="fa fa-user"></i>
+                <input type="text" name="TaiKhoan" class="form-input" placeholder="Tài khoản">
+            </div>
+            <div class="form-group">
+                <i class="fa fa-key"></i>
+                <input type="password" name="MatKhau" class="form-input" placeholder="Mật khẩu">
+            </div>
+            <div class="form-group">
+                <i class="fa fa-key"></i>
+                <input type="password" name="NhapLaiMatKhau" class="form-input" placeholder="Nhập lại mật khẩu">
+            </div>
+            <div>
+                <h3>@Html.ValidationMessageFor(n => n.HoTen)</h3>
+                <h3>@Html.ValidationMessageFor(n => n.Email)</h3>
+                <h3> @Html.ValidationMessageFor(n => n.TaiKhoan)</h3>
+                <h3> @Html.ValidationMessageFor(n => n.MatKhau)</h3>
+                <h3> @Html.ValidationMessageFor(n => n.SoDienThoai)</h3>
+                <h3> @Html.ValidationMessageFor(n => n.DiaChi)</h3>
 
-            <h3>@ViewBag.LoiXacNhanMatKhau</h3>
-            <h3>@ViewBag.TonTai</h3>
-            <h3 class="thanhcong">@ViewBag.DangKyThanhCong</h3>
-        </div>
-        <input type="submit" value="ĐĂNG KÝ" class="form-submit">
-        <p>Bạn đã có tài khoản? Đăng nhập <a style="color:red; text-decoration-line: underline" href="@Url.Action("DangNhap","Home")"> tại đây.</a></p>
-    }
+                <h3>@ViewBag.LoiXacNhanMatKhau</h3>
+                <h3>@ViewBag.TonTai</h3>
+                <h3 class="thanhcong">@ViewBag.DangKyThanhCong</h3>
+            </div>
+            <input type="submit" value="ĐĂNG KÝ" class="form-submit">
+            <p>Bạn đã có tài khoản? Đăng nhập <a style="color:red; text-decoration-line: underline" href="@Url.Action("DangNhap","Home")"> tại đây.</a></p>
+        }
+    </div>
 </section>
 <style>
     h3{

@@ -13,8 +13,7 @@
     <title>Document</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
-    <link href="~/Content/css/style3.css" rel="stylesheet" />
-    <link href="~/Content/css/style2.css" rel="stylesheet" />
+    <link href="~/Content/css/style4.css" rel="stylesheet" />
     <script src="~/Content/js/simpleCart.min.js"></script>
     <script src="~/Scripts/jquery.validate.unobtrusive.min.js"></script>
     <link href="~/Content/css/flexslider.css" rel="stylesheet" />
@@ -54,10 +53,10 @@
     <div class="others">
         @using (Html.BeginForm("LayTuKhoa", "TimKiem"))
         {
-            <li><input placeholder="Tìm kiếm" type="text" name="tukhoa" class="form-control-feedback search"> <input type="submit" value="Tìm" class="btntim" /></li>
+            <li><input placeholder="Tìm kiếm" type="text" name="tukhoa" class="search"> <input type="submit" value="Tìm kiếm" class="btn-search"></li>
             @*<li><input type="submit" value="Tim Kiem"/></li>*@
         }
-        
+
 
         @* Dang Nhap*@
         @if (Session["DangNhap"] != null && Session["DangNhap"] != "")
