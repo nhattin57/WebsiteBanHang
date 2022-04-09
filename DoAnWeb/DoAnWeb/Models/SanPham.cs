@@ -37,6 +37,7 @@
         [Required(ErrorMessage = "Nhập Mô Tả")]
         public string MoTa { get; set; }
 
+        [Display(Name = "Hình Ảnh")]
         [Required]
         public string HinhAnh { get; set; }
 

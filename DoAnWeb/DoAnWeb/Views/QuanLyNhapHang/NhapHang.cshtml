@@ -16,13 +16,16 @@
     });
 </script>
 
+<h2 style="font-weight: bold; text-align: center; margin: 0px;">NHẬP HÀNG</h2>
+
 @using (Html.BeginForm())
 {
-    <span>Nhà cung cấp: </span> @Html.DropDownList("MaNCC")
+    <hr />
+    <span style="font-weight:bold;">Nhà cung cấp: </span> @Html.DropDownList("MaNCC")
     <br />
     <br />
 
-    <span>Ngày nhập: </span>
+    <span style="font-weight:bold;">Ngày nhập: </span>
     <input name="NgayNhap" id="datepicker" type="text" />
     <br />
     <br />
@@ -50,21 +53,22 @@
             </td>
         </tr>
         <tr class="tdFirstChild" data-id="-1">
-            <td>
+            <td style="font-weight:bold;">
                 Sản phẩm
             </td>
-            <td>
-                Đơn Gía
+            <td style="font-weight:bold;">
+                Đơn Giá
             </td>
-            <td>
+            <td style="font-weight:bold;">
                 Số lượng
             </td>
         </tr>
     </table>
 
-    <input type="button" style="padding:3px 5px;" value="+" class="btn-success" id="btnAdd" />
-    <input type="submit" value="Nhập Hàng" class="btn-dark" id="btnNhapHang" />
-
+    <div class="nhaphang">
+        <input type="button" style="padding:3px 5px;" value="+" class="btn-success" id="btnAdd" />
+        <input type="submit" value="Nhập Hàng" class="btn-nhaphang" id="btnNhapHang" />
+    </div>
 }
 
 <script>

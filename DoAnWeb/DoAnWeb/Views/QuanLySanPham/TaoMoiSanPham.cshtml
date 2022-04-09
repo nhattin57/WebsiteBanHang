@@ -33,18 +33,18 @@
         $("#datepicker").datepicker();
     });
 </script>
-<h2>TaoMoiSanPham</h2>
+<h2 style="font-weight: bold; text-align: center; margin: 0px;">THÊM SẢN PHẨM</h2>
 
 @using (Html.BeginForm("TaoMoiSanPham", "QuanLySanPham", FormMethod.Post, new { @enctype = "multipart/form-data" }))
 {
     @Html.AntiForgeryToken()
 
     <div class="form-horizontal">
-        <h4>SanPham</h4>
+        
         <hr />
         @Html.ValidationSummary(true)
 
-        <div class="form-group">
+        <div class="form-group" style="">
             @Html.LabelFor(model => model.TenSP, htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
                 @Html.EditorFor(model => model.TenSP, new { htmlAttributes = new { @class = "form-control" } })

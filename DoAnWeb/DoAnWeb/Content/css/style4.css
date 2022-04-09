@@ -175,11 +175,13 @@ a {
   overflow: hidden;
 }
 
+
+
 .aspect-ratio-169 {
-  display: block;
-  position: relative;
-  padding-top: 51%;
-  transition: 0.3s;
+    display: block;
+    position: relative;
+    padding-top: 39.5%;
+    transition: 0.3s;
 }
 
 .aspect-ratio-169 img {

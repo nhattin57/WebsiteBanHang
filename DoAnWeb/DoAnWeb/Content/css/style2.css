@@ -1,5 +1,12 @@
-﻿body {
+﻿* {
+    margin: 0;
+    padding: 0;
+    color: black;
+    outline: none;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
 }
+
 .menu > li a {
     font-size: 16px;
 }
@@ -42,13 +49,103 @@ element.style {
 }
 
 img {
-    height: auto;
     vertical-align: middle;
     border-style: none;
-    width: 85%;
+    width: auto;
 }
 
 .product-content-left-big-img img {
     width: 70%;
     margin-left: 90px;
+}
+
+.donhang{
+    float:right;
+}
+
+.donhang .btn-donhang{
+  display: inline-block;
+  background: none;
+  border: 1px solid #ccc;
+  border-radius: 0.25em;
+  font-size: 14;
+  width: 100%;
+  padding: 10px 10px 10px 10px; 
+  color: #333;
+  cursor:pointer;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.donhang .btn-donhang:hover{
+  background-color: #000;
+  color: #fff;
+  transition: all 0.3s;
+}
+
+.table-img{
+    text-align:center;
+}
+
+.nhaphang > .btn-nhaphang {
+    display: inline-block;
+    background: none;
+    border: 1px solid #ccc;
+    border-radius: 0.25em;
+    font-size: 14;
+    color: #333;
+    cursor: pointer;
+    font-weight: bold;
+    margin-bottom: 10px;
+    padding: 0 10px;
+    height: 30px;
+}
+
+.nhaphang > .btn-nhaphang:hover {
+    background-color: #000;
+    color: #fff;
+    transition: all 0.3s;
+}
+
+.box-4 {
+    display: block;
+    width: 80%;
+    height: 150px;
+    background-color: orangered;
+    margin: 0 5px;
+    font-size: 16px;
+}
+
+.container {
+    display: block;
+}
+
+.number {
+    color: #fff;
+    text-align: center;
+    padding-top: 30px;
+}
+
+
+h3 {
+    color: #000;
+    font-weight: bold;
+    display: block;
+}
+
+.diengiai {
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.green {
+    background-color: #0cf044;
+}
+
+.blue {
+    background-color: #308cef;
+}
+
+.violet {
+    background-color: violet;
 }

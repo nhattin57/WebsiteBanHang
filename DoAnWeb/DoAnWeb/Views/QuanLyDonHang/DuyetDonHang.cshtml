@@ -5,7 +5,8 @@
     ViewBag.Title = "DuyetDonHang";
     Layout = "~/Views/Layouts/AdminLayout.cshtml";
 }
-
+<h2 style="font-weight: bold; text-align: center; margin: 0px;">DUYỆT ĐƠN HÀNG</h2>
+<hr />
 @using (Html.BeginForm())
 {
     <div class="chitietdonhang table">
@@ -15,12 +16,12 @@
                 <td colspan="4">
                     <table style="width:100%;" class="table">
                         <tr>
-                            <td>Mã Đơn Hàng @Html.Hidden("MaDDH", Model.MaDDH) <b style="color:red;">@Model.MaDDH </b></td>
-                            <td>Mã Khách Hàng <b style="color:red;">@Model.KhachHang.MaKH</b></td>
-                            <td>Tên Khách Hàng <b style="color:red;">@Model.KhachHang.TenKH</b></td>
-                            <td>Ngày Đặt: @Model.NgayDat.Value.ToString("dd/MM/yyyy")</td>
-                            <td>Đã Thanh Toán: @Html.EditorFor(n => n.DaThanhToan)</td>
-                            <td>Đã Giao Hàng: @Html.EditorFor(n => n.TinhTrangGiaoHang)</td>
+                            <td style="font-weight:bold">Mã Đơn Hàng: <br />@Html.Hidden("MaDDH", Model.MaDDH) <b style="color:red;">@Model.MaDDH </b></td>
+                            <td style="font-weight:bold">Mã Khách Hàng: <br /><b style="color:red;">@Model.KhachHang.MaKH</b></td>
+                            <td style="font-weight:bold">Tên Khách Hàng: <br /><b style="color:red;">@Model.KhachHang.TenKH</b></td>
+                            <td style="font-weight:bold">Ngày Đặt: @Model.NgayDat.Value.ToString("dd/MM/yyyy")</td>
+                            <td style="font-weight:bold">Đã Thanh Toán: @Html.EditorFor(n => n.DaThanhToan)</td>
+                            <td style="font-weight:bold">Đã Giao Hàng: @Html.EditorFor(n => n.TinhTrangGiaoHang)</td>
                         </tr>
                     </table>
                 </td>
@@ -30,37 +31,43 @@
             </tr>
             <tr>
                 <td><b>Sản Phẩm</b></td>
-                <td><b>Hỉnh Anh</b></td>
+                <td><b>Hình Ảnh</b></td>
                 <td><b>Số Lượng</b></td>
-                <td><b>Đơn Gía</b></td>
+                <td><b>Đơn Giá</b></td>
             </tr>
             @foreach (var item in lstChiTietDH)
             {
                 <tr>
                     <td>@item.SanPham.TenSP</td>
-                    <td><img width="150" height="100" src="@Url.Content("~/Content/images/"+item.SanPham.HinhAnh)" /></td>
+                    <td>
+                        <div class="table-img">
+                            <img width="150" height="100" src="@Url.Content("~/Content/images/"+item.SanPham.HinhAnh)" />
+                        </div>
+                    </td>
                     <td>@item.SoLuong</td>
                     <td>@item.DonGua.Value.ToString("#,##")</td>
                 </tr>
             }
 
             <tr style="width:100%">
-                <td colspan="4" align="right">Tổng Số Lượng: @Model.ChiTietDonDatHangs.Sum(n => n.SoLuong) Sản Phẩm</td>
+                <td colspan="4" align="right"><div style="font-weight:bold">Tổng Số Lượng: <b style="color:red;"> @Model.ChiTietDonDatHangs.Sum(n => n.SoLuong) sản phẩm</b></div></td>
             </tr>
             <tr>
-                <td colspan="4" align="right">Tổng Tiền: @Model.ChiTietDonDatHangs.Sum(n => n.DonGua).Value.ToString("#,##") Đồng</td>
+                <td colspan="4" align="right"><div style="font-weight:bold">Tổng Tiền: <b style="color:red;"> @Model.ChiTietDonDatHangs.Sum(n => n.DonGua).Value.ToString("#,##") đồng</b></div></td>
             </tr>
 
         </table>
-        <br /> <br />
-        <input type="button" value="In Đơn Hàng" id="btnInDonHang" />
-        <input type="submit" value="Lưu Đơn Hàng" id="btnLuuDonHang" />
+
+        <div class="donhang">
+            <input type="button" value="IN ĐƠN HÀNG" id="btnInDonHang" class="btn-donhang" />
+            <input type="submit" value="LƯU ĐƠN HÀNG" id="btnLuuDonHang" class="btn-donhang" />
+        </div>
     </div>
 }
 
 <script>
     $("#btnInDonHang").click(function () {
-        var content = "<table>"+$("#table").html()+"</table>";
+        var content = "<table>" + $("#table").html() + "</table>";
         InDonHang(content);
     });
 

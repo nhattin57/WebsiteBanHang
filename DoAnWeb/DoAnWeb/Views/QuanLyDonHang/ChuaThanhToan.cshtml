@@ -6,7 +6,8 @@
     Layout = "~/Views/Layouts/AdminLayout.cshtml";
     WebGrid grid = new WebGrid(source: Model, rowsPerPage: 10);
 }
-
+<h2 style="font-weight: bold; text-align: center; margin: 0px;">ĐƠN HÀNG</h2>
+<hr />
 <ul class="nav nav-tabs" id="myTab" role="tablist">
     <li class="nav-item">
         <a class="nav-link active" id="home-tab" href="@Url.Action("ChuaThanhToan","QuanLyDonHang")" role="tab">Chưa Thanh Toán</a>

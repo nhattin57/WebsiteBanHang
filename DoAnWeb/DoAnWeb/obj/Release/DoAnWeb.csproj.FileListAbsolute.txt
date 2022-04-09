@@ -166,7 +166,6 @@ C:\Users\thanh\OneDrive\Máy tính\WebsiteBanHang\DoAnWeb\DoAnWeb\bin\System.Web
 C:\Users\thanh\OneDrive\Máy tính\WebsiteBanHang\DoAnWeb\DoAnWeb\bin\Newtonsoft.Json.xml
 C:\Users\thanh\OneDrive\Máy tính\WebsiteBanHang\DoAnWeb\DoAnWeb\bin\Antlr3.Runtime.pdb
 C:\Users\thanh\OneDrive\Máy tính\WebsiteBanHang\DoAnWeb\DoAnWeb\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
-C:\Users\thanh\OneDrive\Máy tính\WebsiteBanHang\DoAnWeb\DoAnWeb\obj\Release\DoAnWeb.csproj.AssemblyReference.cache
 C:\Users\thanh\OneDrive\Máy tính\WebsiteBanHang\DoAnWeb\DoAnWeb\obj\Release\DoAnWeb.csproj.CoreCompileInputs.cache
 C:\Users\thanh\OneDrive\Máy tính\WebsiteBanHang\DoAnWeb\DoAnWeb\obj\Release\DoAnWeb.dll
 C:\Users\thanh\OneDrive\Máy tính\WebsiteBanHang\DoAnWeb\DoAnWeb\obj\Release\DoAnWeb.pdb
